@@ -1,0 +1,25 @@
+/*
+ *
+ * Login Page
+ *
+ */
+
+.login-area {
+    margin: 20px 10px auto 10px;
+}
+
+.login-area button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.username-input {
+    border-radius: 5px 5px 0px 0px;
+    /* Avoid border overlapping */
+    border-bottom-color: $form-background;
+}
+
+.password-input {
+    border-radius: 0px 0px 5px 5px;
+}
+

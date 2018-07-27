@@ -1,0 +1,68 @@
+// Variables
+// =========================================================================================
+
+$form-background: #fff !default;
+$form-color: $global-color !default;
+$form-padding-horizontal: 10px !default;
+$form-border-width: $global-border-width !default;
+$form-border: $global-border !default;
+$form-height: $global-control-height !default;
+
+//
+// Focus
+//
+
+$form-focus-background: $form-background !default;
+$form-focus-color: $global-color !default;
+$form-focus-border: $global-primary-background !default;
+
+//
+// Disabled
+//
+
+$form-disabled-background: #e9ecef !default;
+$form-disabled-color: $global-color !default;
+$form-disabled-border: $global-border !default;
+
+
+input {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: $form-height;
+    vertical-align: center;
+    border: $form-border-width solid $form-border;
+    padding: 0 $form-padding-horizontal;
+    border-radius: 5px;
+    font: inherit;
+    font-size: 0.9em;
+    color: $form-color;
+    /* Show the overflow in Edge. */
+    overflow: visible;
+    /* Remove default style in iOS. */
+    -webkit-appearance: none;
+    transition: 0.2s ease-in-out;
+    transition-property: color, background-color, border;
+}
+
+/*
+ * Removes placeholder transparecy in Firefox.
+ */
+
+input::moz-placeholder {
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+    background-color: $form-focus-background;
+    color: $form-focus-color;
+    border-color: $form-focus-border;
+}
+
+input:disabled {
+    background-color: $form-disabled-background;
+    color: $form-disabled-color;
+    border-color: $form-disabled-border;
+}

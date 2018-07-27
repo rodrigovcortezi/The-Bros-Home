@@ -1,0 +1,157 @@
+// Variables
+// =========================================================================================
+
+$button-padding-horizontal: 30px !default;
+$button-font-size: $global-font-size !default;
+$button-line-height: $global-control-height !default;
+$button-text-transform: none !default;
+$button-border-width: $global-border-width !default;
+
+//
+// Primary
+//
+
+$button-primary-background: $global-primary-background !default;
+$button-primary-color: $global-inverse-color !default;
+$button-primary-hover-background: darken($button-primary-background, 5%) !default;
+$button-primary-hover-color: $global-inverse-color !default;
+$button-primary-active-background: darken($button-primary-background, 10%) !default;
+$button-primary-active-color: $global-inverse-color !default;
+
+//
+// Secondary
+//
+
+$button-secondary-background: $global-secondary-background !default;
+$button-secondary-color: $global-inverse-color !default;
+$button-secondary-hover-background: darken($button-secondary-background, 5%) !default;
+$button-secondary-hover-color: $global-inverse-color !default;
+$button-secondary-active-background: darken($button-secondary-background, 10%) !default;
+$button-secondary-active-color: $global-inverse-color !default;
+
+//
+// Danger
+//
+
+$button-danger-background: $global-danger-background !default;
+$button-danger-color: $global-inverse-color !default;
+$button-danger-hover-background: darken($button-danger-background, 5%) !default;
+$button-danger-hover-color: $global-inverse-color !default;
+$button-danger-active-background: darken($button-danger-background, 10%) !default;
+$button-danger-active-color: $global-inverse-color !default;
+
+button {
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 $button-padding-horizontal;
+    vertical-align: middle;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    text-align: center;
+    text-decoration: none;
+    text-transform: $button-text-transform;
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color, border-color;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+/*
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Hover */
+button:hover {
+    text-decoration: none;
+}
+
+/* Focus */
+button:focus {
+    outline: none;
+}
+
+/*
+ * Primary
+ */
+
+button.primary {
+    background-color: $button-primary-background;
+    color: $button-primary-color;
+    border: $button-border-width solid transparent;
+}
+
+/* Hover + Focus */
+button.primary:hover,
+button.primary:focus {
+    background-color: $button-primary-hover-background;
+    color: $button-primary-hover-color;
+}
+
+/* OnClick + Active */
+button.primary:active,
+button.primary.uk-active {
+    background-color: $button-primary-active-background;
+    color: $button-primary-active-color;
+}
+
+/*
+ * Secondary
+ */
+
+button.secondary {
+    background-color: $button-secondary-background;
+    color: $button-secondary-color;
+    border: $button-border-width solid transparent;
+}
+
+/* Hover + Focus */
+button.secondary:hover,
+button.secondary:focus {
+    background-color: $button-secondary-hover-background;
+    color: $button-secondary-hover-color;
+}
+
+/* OnClick + Active */
+button.secondary:active,
+button.secondary.uk-active {
+    background-color: $button-secondary-active-background;
+    color: $button-secondary-active-color;
+}
+
+/*
+ * Danger
+ */
+
+button.danger {
+    background-color: $button-danger-background;
+    color: $button-danger-color;
+    border: $button-border-width solid transparent;
+}
+
+/* Hover + Focus */
+button.danger:hover,
+button.danger:focus {
+    background-color: $button-danger-hover-background;
+    color: $button-danger-hover-color;
+}
+
+/* OnClick + Active */
+button.danger:active,
+button.danger.uk-active {
+    background-color: $button-danger-active-background;
+    color: $button-danger-active-color;
+}
