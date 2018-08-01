@@ -1,0 +1,19 @@
+// Variables
+// =========================================================================================
+
+$link-color: $global-primary-background !default;
+
+//
+// Hover
+//
+
+$link-hover-color: darken($link-color, 5%) !default;
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $link-hover-color;
+}
