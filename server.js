@@ -12,6 +12,6 @@ app.get('/login', function(req, res) {
 
 app.get('/signup', function(req, res) {
     res.render('registration');
-})
+});
 
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(port, () => console.log('Server listening on port ' + port));
