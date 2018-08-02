@@ -1,0 +1,242 @@
+/*
+ *
+ * Common
+ *
+ */
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+header, section, article, div {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fafafa;
+  color: #2a2b2c;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.centered-form {
+  max-width: 500px;
+  margin-top: 20px;
+}
+@media (max-width: 500px) {
+  .centered-form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 501px) {
+  .centered-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.centered-form button {
+  width: 100%;
+}
+
+input {
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 40px;
+  vertical-align: center;
+  border: 1px solid #e5e5e5;
+  padding: 0 10px;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 0.9em;
+  color: #2a2b2c;
+  /* Show the overflow in Edge. */
+  overflow: visible;
+  /* Remove default style in iOS. */
+  -webkit-appearance: none;
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color, border;
+}
+
+/*
+ * Removes placeholder transparecy in Firefox.
+ */
+input::moz-placeholder {
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+  background-color: #fff;
+  color: #2a2b2c;
+  border-color: #00acc1;
+}
+
+input:disabled {
+  background-color: #e9ecef;
+  color: #2a2b2c;
+  border-color: #e5e5e5;
+}
+
+button {
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  overflow: visible;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 30px;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: 0.1s ease-in-out;
+  transition-property: color, background-color, border-color;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/*
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Hover */
+button:hover {
+  text-decoration: none;
+}
+
+/* Focus */
+button:focus {
+  outline: none;
+}
+
+/*
+ * Primary
+ */
+button.primary {
+  background-color: #00acc1;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Hover + Focus */
+button.primary:hover,
+button.primary:focus {
+  background-color: #0095a8;
+  color: #fff;
+}
+
+/* OnClick + Active */
+button.primary:active,
+button.primary.uk-active {
+  background-color: #007f8e;
+  color: #fff;
+}
+
+/*
+ * Secondary
+ */
+button.secondary {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Hover + Focus */
+button.secondary:hover,
+button.secondary:focus {
+  background-color: #151515;
+  color: #fff;
+}
+
+/* OnClick + Active */
+button.secondary:active,
+button.secondary.uk-active {
+  background-color: #090909;
+  color: #fff;
+}
+
+/*
+ * Danger
+ */
+button.danger {
+  background-color: #f0506e;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+/* Hover + Focus */
+button.danger:hover,
+button.danger:focus {
+  background-color: #ee395b;
+  color: #fff;
+}
+
+/* OnClick + Active */
+button.danger:active,
+button.danger.uk-active {
+  background-color: #ec2147;
+  color: #fff;
+}
+
+a {
+  color: #00acc1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0095a8;
+}
+
+/*
+ *
+ * Login Page
+ *
+ */
+.login-page .registration-text {
+  text-align: center;
+}
+.login-page .login-area button {
+  width: 100%;
+  margin-top: 10px;
+}
+.login-page .username-input {
+  border-radius: 5px 5px 0px 0px;
+  /* Avoid border overlapping */
+  border-bottom: 0;
+}
+.login-page .username-input:focus + .password-input {
+  border-top-color: #00acc1;
+}
+.login-page .password-input {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.registration-page .registration-area input {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
