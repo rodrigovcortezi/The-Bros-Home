@@ -1,5 +1,10 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+
+const configDB = require('./config/database.js');
+
+mongoose.connect(configDB.url, {useNewUrlParser: true});
 
 const app = express();
 const port = process.env.PORT || 3000;
