@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const configDB = require('./config/database.js');
 const defineRoutes = require('./app/routes.js');
@@ -11,6 +12,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
