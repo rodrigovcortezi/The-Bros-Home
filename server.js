@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 const configDB = require('./config/database.js');
+const defineRoutes = require('./app/routes.js');
 
 mongoose.connect(configDB.url, {useNewUrlParser: true});
 
@@ -14,12 +15,6 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/login', function(req, res) {
-    res.render('index');
-});
-
-app.get('/signup', function(req, res) {
-    res.render('registration');
-});
+defineRoutes(app);
 
 app.listen(port, () => console.log('Server listening on port ' + port));
