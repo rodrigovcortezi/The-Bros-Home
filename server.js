@@ -3,8 +3,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const configDB = require('./config/database.js');
-const defineRoutes = require('./app/routes.js');
+const configDB = require('./config/database');
+const defineRoutes = require('./app/routes');
 
 mongoose.connect(configDB.url, {useNewUrlParser: true});
 
