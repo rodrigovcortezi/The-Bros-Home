@@ -21,4 +21,9 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
+
+// Defines password min length
+User.passwordMinLength = 8;
+
+module.exports = User;

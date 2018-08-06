@@ -1,3 +1,4 @@
+const {check, validationResult} = require('express-validator/check');
 const User = require('./models/user');
 
 module.exports = function(app) {
@@ -10,7 +11,19 @@ module.exports = function(app) {
 	res.render('registration');
     });
 
-    app.post('/signup', function(req, res) {
+    app.post('/signup', [
+	check('username').isAlphanumeric(),
+	check('email').isEmail(),
+	check('password').isLength({min: User.passwordMinLength})
+    ], function(req, res) {
+	const errors = validationResult(req);
+	if(!errors.isEmpty()) {
+	    res.status(422);
+	    res.end();
+
+	    return;
+	}
+
 	const newUser = new User();
 
 	newUser.local.name = req.body.name;
