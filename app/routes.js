@@ -12,8 +12,9 @@ module.exports = function(app) {
     });
 
     app.post('/signup', [
-	check('username').isAlphanumeric(),
-	check('email').isEmail(),
+	check('name').trim(),
+	check('username').isAlphanumeric().trim(),
+	check('email').isEmail().trim(),
 	check('password').isLength({min: User.passwordMinLength})
     ], function(req, res) {
 	const errors = validationResult(req);
