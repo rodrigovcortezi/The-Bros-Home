@@ -78,7 +78,6 @@ input::moz-placeholder {
 }
 
 input.danger {
-  color: #f0506e;
   border-color: #f0506e;
 }
 
