@@ -9,6 +9,13 @@ $form-border: $global-border !default;
 $form-height: $global-control-height !default;
 
 //
+// Danger
+//
+
+$form-danger-color: $global-danger-background !default;
+$form-danger-border: $global-danger-background !default;
+
+//
 // Focus
 //
 
@@ -52,6 +59,11 @@ input {
 
 input::moz-placeholder {
     opacity: 1;
+}
+
+input.danger {
+    color: $form-danger-color;
+    border-color: $form-danger-border;
 }
 
 input:focus {

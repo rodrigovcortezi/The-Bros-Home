@@ -77,6 +77,11 @@ input::moz-placeholder {
   opacity: 1;
 }
 
+input.danger {
+  color: #f0506e;
+  border-color: #f0506e;
+}
+
 input:focus {
   outline: none;
   background-color: #fff;

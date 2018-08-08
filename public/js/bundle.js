@@ -3108,6 +3108,11 @@ let inputElements = document.querySelectorAll('.registration-area form input');
 inputElements.forEach(element => {
     element.addEventListener('blur', function() {
 	let result = formValidator(element);
+	if(result) {
+	    element.classList.remove('danger');
+	} else {
+	    element.classList.add('danger');
+	}
     });
 });
 
